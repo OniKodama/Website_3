@@ -1,5 +1,4 @@
 import './App.css';
-import Navbar from './components/Navbar';
 import React from 'react'
 import {BrowserRouter as Router,Routes, Route} from 'react-router-dom'
 import Home from './components/pages/Home';
@@ -11,12 +10,11 @@ function App() {
   return (
     <>
       <Router>
-          <Navbar />
-          <Home />
           <Routes>
-            <Route path = "/products" component = {Products} exact />
-            <Route path = "/services" component = {Services} exact />
-            <Route path = "/sign-up" component = {SignUp} exact />
+            <Route path = "/" element = {<Home />} exact/>
+            <Route path = "/products"  element = {<Products />} exact />
+            <Route path = "/services"  element = {<Services />} exact />
+            <Route path = "/sign-up"  element = {<SignUp />} exact />
           </Routes>
       </Router>
       
